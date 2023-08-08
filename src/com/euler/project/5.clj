@@ -7,6 +7,6 @@
   (fn [dividend]
     (every? #(zero? (rem dividend %)) divisors)))
 
-(defn smallest-dividend [divisor-range] (->> (range 1 Integer/MAX_VALUE)
+(defn smallest-dividend [divisor-range] (->> (range 10 Integer/MAX_VALUE 10)
                                              (filter divisor-range)
                                              (first)))
